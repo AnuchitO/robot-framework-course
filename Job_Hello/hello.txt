@@ -1,0 +1,3 @@
+*** Test Cases ***
+Hello
+    Log    hello   console=True
