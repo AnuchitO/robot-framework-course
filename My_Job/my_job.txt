@@ -1,0 +1,8 @@
+*** Settings ***
+Library     Selenium2Library
+Suite Teardown    Close All Browsers
+
+*** TestCases ***
+Test Log2
+  Open Browser    http://www.google.com
+    Log  My_Job    console=True
