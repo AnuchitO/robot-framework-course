@@ -1,0 +1,23 @@
+*** Settings ***
+Library       Selenium2Library
+Suite Setup    Open Browser    http://www.google.com
+Suite Teardown    Close All Browsers
+
+*** Variables ***
+${ROBOT_FRAMEWORK}  Robot Framework
+${FACEBOOK}    Facebook
+
+
+*** Test Cases ***
+Search Google With Robot Framework
+  Search Google   ${ROBOT_FRAMEWORK}
+
+Search Google With Facebook
+  Search Google   ${FACEBOOK}
+
+*** Keywords ***
+Search Google
+  [Arguments]     ${word}
+  Input Text        lst-ib        ${word}
+  Click Button      xpath=//*[@id="sblsbb"]/button
+  Wait Until Page Contains      ${word}

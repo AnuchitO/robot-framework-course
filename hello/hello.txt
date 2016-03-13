@@ -1,0 +1,9 @@
+*** Settings ***
+
+*** Variables ***
+
+*** Test Cases ***
+Hello Specification
+  Log   Hello World     console=True
+
+*** Keywords ***
